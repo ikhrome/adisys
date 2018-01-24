@@ -15,6 +15,8 @@ mongoose.connect(process.env.DB_DSN)
   .catch((err) => console.error(err));
 const Patient = require('./models/patient')
 
+hbs.registerPartials(__dirname + '/views/partials');
+
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 
