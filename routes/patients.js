@@ -18,4 +18,10 @@ router.get('/list', function(req, res) {
 		})
 })
 
+router.get('/card/:id', function(req, res) {
+	// TODO: check id by regular expression!
+	logger.info(`Performing patients/card/${req.params.id} request`)
+	res.send(`ObjectId passed into route is: ${req.params.id}. TODO: make magic!`)
+})
+
 module.exports = router
