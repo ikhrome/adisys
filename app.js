@@ -13,7 +13,7 @@ const mongoose = require('mongoose')
 // Logger:
 const morgan = require('morgan')
 const logger = require('winston')
-app.use(morgan('combined'))
+app.use(morgan('tiny'))
 
 // Connect to MongoDB:
 // WARNING: don't forget to put .env file into root directory!
