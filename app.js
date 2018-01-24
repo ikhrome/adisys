@@ -1,6 +1,7 @@
 /**
  * ADiSys - Advanced Dispensaries System
  * by Ivan Khromov with ❤️
+ * 2018
  */
 // Require all needed dependencies:
 const express = require('express')
