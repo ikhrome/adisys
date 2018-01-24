@@ -4,8 +4,9 @@
  */
 
 const express = require('express')
-let app = express()
+const dotenv  = require('dotenv').config()
+const app = express()
 
 app.get('/', (req, res) => res.send('Hi, adisys!'))
 
-app.listen(7421, () => console.log('ADiSys listening on port 3000!'))
+app.listen(process.env.PORT, () => console.log('ADiSys listening on port 3000!'))
