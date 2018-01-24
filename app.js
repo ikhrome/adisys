@@ -29,4 +29,7 @@ app.set('view options', { layout: 'layout/app' });
 // TODO: Check auth in future!
 app.get('/', (req, res) => res.redirect(301, "/patients/list/"))
 
+// Patients:
+app.use('/patients', require('./routes/patients.js'))
+
 app.listen(process.env.PORT, () => console.log(`ADiSys listening on port ${process.env.PORT}!`))
