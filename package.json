@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./node_modules/jshint/bin/jshint app.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
     "express": "^4.16.2",
     "hbs": "^4.0.1",
     "mongoose": "^5.0.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.5"
   }
 }
