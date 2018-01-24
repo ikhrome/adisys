@@ -1,0 +1,22 @@
+{
+  "name": "adisys",
+  "version": "1.0.0",
+  "description": "Advanced dispensaries system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ikhrome/adisys.git"
+  },
+  "keywords": [
+    "healthcare"
+  ],
+  "author": "Ivan Khromov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikhrome/adisys/issues"
+  },
+  "homepage": "https://github.com/ikhrome/adisys#readme"
+}
