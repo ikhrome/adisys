@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/ikhrome/adisys/issues"
   },
-  "homepage": "https://github.com/ikhrome/adisys#readme"
+  "homepage": "https://github.com/ikhrome/adisys#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
