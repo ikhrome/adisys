@@ -8,6 +8,10 @@ let patientsSchema = new Schema({
   birthdate: Date
 })
 
+patientsSchema.virtual('full_name').get(function() {
+  return `${this.first_name} ${this.middle_name} ${this.last_name}`;
+});
+
 let Patient = mongoose.model('Patient', patientsSchema)
 
 module.exports = Patient
