@@ -8,6 +8,7 @@ const Patient = require('../models/patient')
 require('../models/workplace')
 
 router.get('/list', function(req, res) {
+	logger.info('Performing patients/list request')
 	Patient.find()
 		.populate('workplace')
 		.exec((err, pats) => {
