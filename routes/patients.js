@@ -4,8 +4,8 @@ const logger  = require('winston')
 
 // Import all models!
 // If I use ref fields, I need to import all of this here:
-const Patient = require("../models/patient")
-const Workplace = require("../models/workplace")
+const Patient = require('../models/patient')
+const Workplace = require('../models/workplace')
 
 router.get('/list', function(req, res) {
 	Patient.find()
