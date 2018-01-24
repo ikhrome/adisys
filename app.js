@@ -19,6 +19,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
+app.set('view options', { layout: 'layout/app' });
 
 app.get('/', function(req, res) {
   Patient.find({}, function(err, patients) {
