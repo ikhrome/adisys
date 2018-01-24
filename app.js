@@ -23,7 +23,9 @@ app.set('views', __dirname + '/views');
 app.get('/', function(req, res) {
   Patient.find({}, function(err, patients) {
     if (err) throw err
-    res.json(patients)
+    res.render('patients/list', {
+      patients: patients
+    })
   })
 })
 
