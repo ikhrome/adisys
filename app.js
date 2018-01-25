@@ -30,6 +30,10 @@ app.set('view engine', 'hbs')
 app.set('views', __dirname + '/views')
 app.set('view options', { layout: 'layout/app' })
 
+app.use('/static', express.static(__dirname + '/static'));
+app.use('/twbs', express.static(__dirname + '/node_modules/bootstrap/dist'))
+app.use('/jq', express.static(__dirname + '/node_modules/jquery/dist'))
+
 // Set application default route, which performs 301 redirect
 // for browser. New location is /patients/list.
 // TODO: Check auth in future!
