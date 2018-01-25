@@ -12,7 +12,7 @@ const mongoose = require('mongoose')
 
 // Logger:
 const morgan = require('morgan')
-const logger = require('winston')
+const logger  = require('./misc/logger')
 app.use(morgan('tiny'))
 
 // Connect to MongoDB:
