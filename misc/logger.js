@@ -19,5 +19,5 @@ adiLogger.add(winston.transports.Telegram, {
 	level : 'error',
 	unique: true,
 	template : 'У нас ошибка! – [{level}] [{message}]'
-});
+})
 module.exports = adiLogger
