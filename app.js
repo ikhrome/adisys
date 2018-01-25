@@ -19,7 +19,7 @@ app.use(morgan('tiny'))
 // WARNING: don't forget to put .env file into root directory!
 mongoose.connect(process.env.DB_DSN)
 	.then(() => logger.info('DB connection succesful'))
-	.catch((err) => logger.error(err))
+	.catch((err) => logger.error(err.message))
 
 // Handlebars. Register all needed functionality.
 // All templates are in ./views/ directory
