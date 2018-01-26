@@ -3,9 +3,10 @@
  * by Ivan Khromov with ❤️
  * 2018
  */
+// Place loading of .env files to top.
+require('dotenv').config()
 // Require all needed dependencies:
 const express = require('express')
-require('dotenv').config()
 const hbs = require('hbs')
 const app = express()
 const mongoose = require('mongoose')
