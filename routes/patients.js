@@ -1,5 +1,6 @@
 const express = require('express')
 const router  = express.Router()
+const mongoose = require('mongoose');
 
 // Import all models!
 // If I use ref fields, I need to import all of this here:
@@ -17,8 +18,11 @@ router.get('/list', function(req, res) {
 })
 
 router.get('/card/:id', function(req, res) {
-	// TODO: check id by regular expression!
-	res.send(`ObjectId passed into route is: ${req.params.id}. TODO: make magic!`)
+	if(!mongoose.Types.ObjectId.isValid(req.params.id))
+		res.status(403).send("Nope! This is not valid MongoDB ObjectId!")
+	Patient.findOne({ _id: req.params.id }, function(err, patient) {
+		res.render('patients/card', { patient: patient })
+	})
 })
 
 module.exports = router
