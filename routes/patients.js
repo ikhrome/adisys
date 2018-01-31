@@ -1,6 +1,5 @@
 const express = require('express')
 const router  = express.Router()
-const logger  = require('../misc/logger')
 
 // Import all models!
 // If I use ref fields, I need to import all of this here:
