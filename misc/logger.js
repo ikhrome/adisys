@@ -4,7 +4,8 @@ require('winston-telegram').Telegram
 
 adiLogger.add(winston.transports.Console, {
 	level: 'debug',
-	colorize: true
+	colorize: true,
+	timestamp: true
 })
 
 adiLogger.add(winston.transports.File, {

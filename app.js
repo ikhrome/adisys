@@ -14,6 +14,13 @@ const mongoose = require('mongoose')
 // Logger:
 const morgan = require('morgan')
 const logger  = require('./misc/logger')
+
+app.use((req, res, next) => {
+	logger.info(`Performing ${req.originalUrl} request`)
+
+	next()
+})
+
 app.use(morgan('tiny'))
 
 // Connect to MongoDB:
